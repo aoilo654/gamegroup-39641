@@ -19,9 +19,9 @@ has_many :comments
 | Column             | Type       | Options                        |
 | ------------------ | ---------- | ------------------------------ |
 | game_title_id      | integer    | null: false                    |
-| player_name        | text       |                                |
+| player_name        | string     |                                |
 | rank               | integer    |                                |
-| clan               | text       |                                |
+| clan               | string     |                                |
 | playstyle          | text       |                                |
 | user               | references | null: false, foreign_key: true |
 
