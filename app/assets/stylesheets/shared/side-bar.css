@@ -1,0 +1,51 @@
+.left-side-bar{
+  background-color: #9dc1f1;
+  width: 250px;
+  height: 100vh;
+  margin-left: 15vw;
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-side-bar{
+  background-color: #9dc1f1;
+  width: 250px;
+  height: 100vh;
+  margin-right: 15vw;
+  padding: 2vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-contents{
+ justify-content: center;
+}
+
+.player-date{
+
+}
+
+.chara-img{
+  width: 200px;
+  height: 300px;
+}
+.player-info{
+  
+}
+
+.player-name{
+
+}
+
+.player-rank{
+
+}
+
+.player-clan{
+
+}
+
+.player-style{
+
+}

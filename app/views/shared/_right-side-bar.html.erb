@@ -2,17 +2,22 @@
   <div class='user-contents'>
     <div class='player-date'>
       <%# image_tag @game.image, class: 'chara-img' %>
+      <%= image_tag("test1.png",class: 'chara-img')  %>
       <div class='player-info'>
         <h3 class='player-name'>
+        プレイヤー名：ヴァンピィ
           <%# game.player_name %>
         </h3>
         <div class='player-rank'>
+        ランク：5
           <%# game.rank %>
         </div>
         <div class='player-clan'>
+        クラン名：あああ
           <%# game.clan %>
         </div>
         <div class='player-style'>
+        プレイスタイル：時々
           <%# game.playstyle %>
         </div>
       </div>
