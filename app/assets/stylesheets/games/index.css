@@ -1,4 +1,18 @@
 .contents{
   display: flex;
-  justify-content: space-between;
+  width: 100vw;
+  background-image: url('priconekabe.jpg');
+  background-size: cover;
+}
+
+.game-index{
+  width: 50vw;
+  background-color: #ffffff;
+}
+
+.logo-img{
+  height: 70px;
+  width: 200px;
+  border-radius: 5px;
+  margin: 1vw;
 }
