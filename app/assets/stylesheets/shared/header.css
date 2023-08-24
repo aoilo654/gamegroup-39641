@@ -35,6 +35,13 @@
   align-items: flex-end;
 }
 
+.user-name {
+  text-decoration: none;
+  margin-right: 3vw;
+  color: #333333;
+  font-weight: bold;
+}
+
 .login{
   text-decoration: none;
   line-height: 32px;

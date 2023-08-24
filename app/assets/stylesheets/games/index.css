@@ -1,13 +1,23 @@
 .contents{
   display: flex;
   width: 100vw;
+  height: 100vh;
   background-image: url('priconekabe.jpg');
   background-size: cover;
+  justify-content: center;
+}
+
+.main-content{
+  width: 50vw;
+  height: 100%;
+  background-color: #ffffff;
 }
 
 .game-index{
-  width: 50vw;
-  background-color: #ffffff;
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
 .logo-img{
