@@ -1,0 +1,55 @@
+<%= render "shared/header" %>
+  
+<div class="contents">
+  <%= render "shared/left-side-bar" %>
+
+  <div class="main-content">
+    <h2 class="items-sell-title">ゲームの情報を入力</h2>
+    <%= form_with model: @game, url:games_path(game_title_id: params[:game_title_id]), local: true do |f| %>
+
+      
+      <%# 画像 %>
+      <div class="img-upload">
+        <div class="weight-bold-text">
+          推しキャラorプレイヤー画像
+        </div>
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"item-image" %>
+        </div>
+      </div>
+      <%# /画像 %>
+
+      <%# プレイヤー情報 %>
+      <div class="new-items">
+        <div class="weight-bold-text">
+          プレイヤー名
+        </div>
+        <%= f.text_field :player_name, class:"price-input", id:"item-name", placeholder:"プレイヤー名（40文字まで)", maxlength:"40" %>
+        <div class="weight-bold-text">
+          RANK
+        </div>
+        <%= f.text_field :rank, class:"price-input", id:"item-price", placeholder:"ランク入力" %>
+        <div class="weight-bold-text">
+          クラン名
+        </div>
+        <%= f.text_field :clan, class:"price-input", id:"item-price", placeholder:"クラン名入力" %>
+        <div class="items-explain">
+          <div class="weight-bold-text">
+            プレイスタイル
+          </div>
+          <%= f.text_area :style, class:"items-text", id:"item-info", placeholder:"プレイスタイル" ,maxlength:"1000" %>
+        </div>
+        <div class="sell-btn-contents">
+          <%= f.submit "登録する" ,class:"sell-btn" %>
+          <%=link_to 'もどる', games_path(game_title_id: params[:game_title_id]), class:"back-btn" %>
+        </div>
+      </div>
+      <%# /プレイヤー情報 %>
+      <% end %>
+  </div>
+
+  <%= render "shared/right-side-bar" %>
+</div>

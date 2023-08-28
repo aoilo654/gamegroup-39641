@@ -1,26 +1,34 @@
 <div class='left-side-bar'>
   <div class='user-contents'>
-    <div class='player-date'>
-      <%# image_tag @game.image, class: 'chara-img' %>
-      <%= image_tag("test1.png",class: 'chara-img')  %>
-      <div class='player-info'>
-        <h3 class='player-name'>
-        プレイヤー名：ヴァンピィ
-          <%# game.player_name %>
-        </h3>
-        <div class='player-rank'>
-        ランク：5
-          <%# game.rank %>
+
+    <% if user_signed_in? && params[:game_title_id] != nil %>
+      <% unless Game.exists?(game_title_id: params[:game_title_id]) %>
+        <%= link_to new_game_path(game_title_id: params[:game_title_id]), class: 'purchase-btn' do %>
+        <%= image_tag 'icon_game.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+        <% end %>
+      <% else @game.user_id == current_user.id %>
+        <div class='player-date'>
+          <%= image_tag @game.image, class: 'chara-img' %>
+          <div class='player-info'>
+            <h3 class='player-name'>
+            プレイヤー名：
+              <%= @game.player_name %>
+            </h3>
+            <div class='player-rank'>
+            ランク：
+              <%= @game.rank %>
+            </div>
+            <div class='player-clan'>
+            クラン名：
+              <%= @game.clan %>
+            </div>
+            <div class='player-style'>
+            プレイスタイル：
+              <%= @game.playstyle %>
+            </div>
+          </div>
         </div>
-        <div class='player-clan'>
-        クラン名：あああ
-          <%# game.clan %>
-        </div>
-        <div class='player-style'>
-        プレイスタイル：時々
-          <%# game.playstyle %>
-        </div>
-      </div>
-    </div>
+      <% end %>
+    <% end %>
   </div>
 </div>

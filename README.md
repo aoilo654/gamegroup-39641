@@ -13,6 +13,7 @@
 
 has_many :games
 has_many :comments
+has_many :game_tweets
 
 ## games テーブル
 
@@ -28,7 +29,6 @@ has_many :comments
 ### Association
 
 has_one  :invitation
-has_many :game_tweets
 belongs  :game_title
 
 ## invitations テーブル
@@ -48,11 +48,13 @@ belongs_to :game
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
 | tweet         | text       | null: false                    |
-| game          | references | null: false, foreign_key: true |
+| game_title_id | integer    | null: false                    |
+| user          | references | null: false, foreign_key: true |
 
 ### Association
 
-belongs_to :game
+belongs_to :user
+belongs_to :game_title
 
 ## comments テーブル
 

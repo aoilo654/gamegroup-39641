@@ -1,14 +1,26 @@
 <%= render "shared/header" %>
   
-<div class="contents">
+<div class="contents
+<% case params[:game_title_id] %>
+<% when nil then %>
+  gameback10
+<% when "1" then %>
+  gameback1
+<% when "2" then %>
+  gameback2
+<% when "3" then %>
+  gameback3
+<% end %>">
   <%= render "shared/left-side-bar" %>
 
   <div class="main-content">
-    <div class="game-index">
-      <%= image_tag("grablulogo.png",class: 'logo-img')  %>
-      <%= image_tag("priconelogo.png",class: 'logo-img')  %>
-      <div class="gameback3">ウマ娘プリティーダービー</div>
-    </div>
+    <% GameTitle.all.each do |game_title| %>
+      <%= link_to games_path(game_title_id: game_title.id) do %>
+        <div class="game-index">
+          <%= image_tag game_title.image_path, class: 'logo-img'  %>
+        </div>
+      <% end %>
+    <% end %>
   </div>
 
   <%= render "shared/right-side-bar" %>

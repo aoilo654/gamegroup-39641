@@ -2,7 +2,7 @@ class CreateGames < ActiveRecord::Migration[7.0]
   def change
     create_table :games do |t|
 
-      t.integer :game_id,  null: false
+      t.integer :game_title_id,  null: false
       t.string  :player_name
       t.integer :rank
       t.string  :clan

@@ -2,9 +2,24 @@
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-image: url('priconekabe.jpg');
   background-size: cover;
   justify-content: center;
+}
+
+.gameback0{
+  background-image: url('priconekabe.jpg');
+}
+
+.gameback1{
+  background-image: url('guraburu.png');
+}
+
+.gameback2{
+  background-image: url('priconekabe.png');
+}
+
+.gameback3{
+  background-image: url('4298422956_d75a809d37.jpg');
 }
 
 .main-content{
