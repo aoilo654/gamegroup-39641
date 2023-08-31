@@ -7,4 +7,5 @@ class GameTitle < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :games
+  has_many :game_tweets
 end
