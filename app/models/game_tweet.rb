@@ -1,0 +1,2 @@
+class GameTweet < ApplicationRecord
+end
