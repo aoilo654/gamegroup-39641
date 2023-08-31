@@ -4,7 +4,7 @@
   
   <%= render "shared/left-side-bar" %>
 
-  <%= form_with model: @user, url: user_registration_path, class: 'contents', local: true do |f| %>
+  <%= form_with model: @user, url: user_registration_path, class: 'main-content', local: true do |f| %>
   <div class='main-content'>
 
     <%= render 'shared/error_messages', model: f.object %>

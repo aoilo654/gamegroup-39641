@@ -4,7 +4,7 @@
 
 <%= render "shared/left-side-bar" %>
 
-  <%= form_with model: @user, url: user_session_path, class: 'contents', local: true do |f| %>
+  <%= form_with model: @user, url: user_session_path, class: 'main-content', local: true do |f| %>
   <div class='main-content'>
     <div class='login-flash-message'>
       <%= flash[:notice] %>
