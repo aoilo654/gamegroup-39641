@@ -14,7 +14,18 @@
   <%= render "shared/left-side-bar" %>
 
   <div class="main-content">
-    
+    <% @game_tweets.each do |tweet| %>
+    <div class="content_post" >
+      <div class="lower-message">
+        <div class="message-content">
+          おはよう
+        </div>
+      </div>
+      <div class="user-name">
+        Tom
+      </div>
+    </div>
+    <% end %>
   </div>
 
   <%= render "shared/right-side-bar" %>
