@@ -14,13 +14,15 @@
   <%= render "shared/left-side-bar" %>
 
   <div class="main-content">
-    <% GameTitle.all.each do |game_title| %>
-      <%= link_to games_path(game_title_id: game_title.id) do %>
-        <div class="game-index">
-          <%= image_tag game_title.image_path, class: 'logo-img'  %>
-        </div>
+    <ul class="game-index">
+      <% GameTitle.all.each do |game_title| %>
+        <li class="game-content">
+          <%= link_to games_path(game_title_id: game_title.id) do %>
+              <%= image_tag game_title.image_path, class: 'logo-img'  %>
+          <% end %>
+        </li>
       <% end %>
-    <% end %>
+    </ul>
   </div>
 
   <%= render "shared/right-side-bar" %>
