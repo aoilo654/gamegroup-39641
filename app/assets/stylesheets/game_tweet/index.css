@@ -1,18 +1,23 @@
 .tweet-content{
   width: calc(100vw - 250px - 250px - 15vw - 15vw);
-  height: calc(100vh - 90px);
+  height: 100vh;
   background-color: #ffffff;
   padding: 2vw;
   min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
 }
 
 .content_post{
-  
+  height: calc(100vh - 90px);
+  overflow: scroll;
 }
 
 .tweet-footer{
   background-color: #DDDDDD;
   height: 90px;
+  padding: 20px 40px;
 }
 
 .tweet-form{
