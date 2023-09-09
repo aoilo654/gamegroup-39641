@@ -17,7 +17,7 @@
     <ul class="game-index">
       <% GameTitle.all.each do |game_title| %>
         <li class="game-content">
-          <%= link_to games_path(game_title_id: game_title.id) do %>
+          <%= link_to game_tweets_path(game_title_id: game_title.id) do %>
               <%= image_tag game_title.image_path, class: 'logo-img'  %>
           <% end %>
         </li>
