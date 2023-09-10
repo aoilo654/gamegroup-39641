@@ -1,6 +1,6 @@
 .tweet-content{
   width: calc(100vw - 250px - 250px - 15vw - 15vw);
-  height: 100vh;
+  height: 100%;
   background-color: #ffffff;
   padding: 2vw;
   min-width: 220px;
@@ -10,7 +10,7 @@
 }
 
 .content_post{
-  height: calc(100vh - 90px);
+  height: calc(100% - 90px);
   overflow: scroll;
 }
 
