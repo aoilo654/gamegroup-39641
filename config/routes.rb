@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   root to: "games#index"
   resources :games, only: [:index, :new, :create]
-  resources :game_tweets, only: :index
+  resources :game_tweets, only: [:index, :create]
 end

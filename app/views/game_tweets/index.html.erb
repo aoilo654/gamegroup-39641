@@ -26,12 +26,12 @@
       </div>
     </div>
     <%# end %>
-    <div class="tweet-footer">
+    <%= form_with model: @game_tweet, url: game_tweets_path(game_title_id: params[:game_title_id]), class: "tweet-footer", local: true do |f| %>
       <div class="tweet-form">
-        <input class="form-message" placeholder= "type a message"> 
+        <%= f.text_field :tweet, class="form-message" placeholder= "type a message" %> 
       </div>
-      <input class="form-submit" type="submit" value="送信">
-    </div>
+      <%= f.submit "送信", class="form-submit" %>
+    <% end %>
   </div>
 
   <%= render "shared/right-side-bar" %>
