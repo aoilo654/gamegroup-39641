@@ -2,7 +2,7 @@ class GameTweetsController < ApplicationController
 
   def index
     @game_tweets = GameTweet.find_by(game_title_id: params[:game_title_id])
-    @game_tweet = GameTweet.new(tweet_params)
+    @game_tweet = GameTweet.new
   end
 
   def create

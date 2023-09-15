@@ -26,11 +26,11 @@
       </div>
     </div>
     <%# end %>
-    <%= form_with model: @game_tweet, url: game_tweets_path(game_title_id: params[:game_title_id]), class: "tweet-footer", local: true do |f| %>
+    <%= form_with model: @game_tweet, url:game_tweets_path(game_title_id: params[:game_title_id]), class: "tweet-footer", local: true do |f| %>
       <div class="tweet-form">
-        <%= f.text_field :tweet, class="form-message" placeholder= "type a message" %> 
+        <%= f.text_field :tweet, class:"form-message", placeholder: "type a message" %> 
       </div>
-      <%= f.submit "送信", class="form-submit" %>
+      <%= f.submit "送信", class:"form-submit" %>
     <% end %>
   </div>
 
