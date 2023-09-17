@@ -6,7 +6,7 @@
   min-width: 220px;
   display: flex;
   flex-direction: column;
-  padding: 20px 40px;
+  padding: 20px 20px;
 }
 
 .content_post{
@@ -14,8 +14,14 @@
   overflow: scroll;
 }
 
+.message-content{
+  background-color: #dad7d7;
+  border-radius: 5px;
+  padding: 5px;
+}
+
 .tweet-footer{
-  background-color: #DDDDDD;
+  background-color: #8cc6e7;
   height: 90px;
   padding: 20px 40px;
   display: flex;
