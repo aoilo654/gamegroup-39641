@@ -1,7 +1,8 @@
 class GameTweetsController < ApplicationController
 
   def index
-    @game = Game.find_by(game_title_id: params[:game_title_id])
+    @game = Game.where(game_title_id: params[:game_title_id])
+    @mygame = @game.find_by(user_id: current_user.id)
     @game_tweets = GameTweet.find_by(game_title_id: params[:game_title_id])
     @game_tweet = GameTweet.new
   end

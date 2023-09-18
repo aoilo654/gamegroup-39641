@@ -2,29 +2,29 @@
   <div class='user-contents'>
 
     <% if user_signed_in? && params[:game_title_id] != nil %>
-      <% unless Game.exists?(game_title_id: params[:game_title_id]) %>
+      <% unless @game.exists?(user_id: current_user.id) %>
         <%= link_to new_game_path(game_title_id: params[:game_title_id]), class: 'purchase-btn' do %>
         <%= image_tag 'icon_game.png' , size: '185x50' ,class: "purchase-btn-icon" %>
         <% end %>
-      <% else @game.user_id == current_user.id %>
+      <% else %>
         <div class='player-date'>
-          <%= image_tag @game.image, class: 'chara-img' %>
+          <%= image_tag @mygame.image, class: 'chara-img' %>
           <div class='player-info'>
             <h3 class='player-name'>
             プレイヤー名：
-              <%= @game.player_name %>
+              <%= @mygame.player_name %>
             </h3>
             <div class='player-rank'>
             ランク：
-              <%= @game.rank %>
+              <%= @mygame.rank %>
             </div>
             <div class='player-clan'>
             クラン名：
-              <%= @game.clan %>
+              <%= @mygame.clan %>
             </div>
             <div class='player-style'>
             プレイスタイル：
-              <%= @game.playstyle %>
+              <%= @mygame.playstyle %>
             </div>
           </div>
         </div>

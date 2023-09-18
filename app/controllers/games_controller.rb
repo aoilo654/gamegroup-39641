@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
 
   def index
-      @game = Game.find_by(game_title_id: params[:game_title_id])
+    @game = Game.find_by(game_title_id: params[:game_title_id])
   end
   
   def new
