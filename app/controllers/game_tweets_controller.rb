@@ -2,7 +2,7 @@ class GameTweetsController < ApplicationController
 
   def index
     @game = Game.where(game_title_id: params[:game_title_id])
-    @mygame = @game.find_by(user_id: current_user.id)
+    set_mygame
     @game_tweets = GameTweet.find_by(game_title_id: params[:game_title_id])
     @game_tweet = GameTweet.new
   end
@@ -21,5 +21,11 @@ class GameTweetsController < ApplicationController
   private
   def tweet_params
     params.require(:game_tweet).permit(:game_title_id, :tweet).merge(user_id: current_user.id)
+  end
+
+  def set_mygame
+    if user_signed_in?
+      @mygame = @game.find_by(user_id: current_user.id)
+    end
   end
 end
